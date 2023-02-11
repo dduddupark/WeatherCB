@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1650A22997468F0096F4F0 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A12997468F0096F4F0 /* AddressViewController.swift */; };
 		9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426142994A23000EFBF74 /* AppDelegate.swift */; };
 		9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426162994A23000EFBF74 /* SceneDelegate.swift */; };
 		9B6426192994A23000EFBF74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426182994A23000EFBF74 /* MainViewController.swift */; };
@@ -15,6 +16,16 @@
 		9B64262C2994A23100EFBF74 /* WeatherCBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64262B2994A23100EFBF74 /* WeatherCBTests.swift */; };
 		9B6426362994A23100EFBF74 /* WeatherCBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426352994A23100EFBF74 /* WeatherCBUITests.swift */; };
 		9B6426382994A23100EFBF74 /* WeatherCBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426372994A23100EFBF74 /* WeatherCBUITestsLaunchTests.swift */; };
+		9B6426462994C34200EFBF74 /* MyNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426452994C34200EFBF74 /* MyNetWork.swift */; };
+		9B64268E2994CDA400EFBF74 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B64268D2994CDA400EFBF74 /* OpenGLES.framework */; };
+		9B6426902994CDAB00EFBF74 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B64268F2994CDAB00EFBF74 /* SystemConfiguration.framework */; };
+		9B6426922994CDB600EFBF74 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6426912994CDB600EFBF74 /* CoreLocation.framework */; };
+		9B6426942994CDBD00EFBF74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6426932994CDBD00EFBF74 /* QuartzCore.framework */; };
+		9B6426962994CDCB00EFBF74 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6426952994CDCB00EFBF74 /* libc++.tbd */; };
+		9B6426982994CDD500EFBF74 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6426972994CDD500EFBF74 /* libxml2.tbd */; };
+		9B64269A2994CDE000EFBF74 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6426992994CDE000EFBF74 /* libsqlite3.tbd */; };
+		9B6426CB2994D0E200EFBF74 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426CA2994D0E200EFBF74 /* MapViewController.swift */; };
+		9B6426CC2994D32F00EFBF74 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B64269F2994CEDB00EFBF74 /* DaumMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B1650A12997468F0096F4F0 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		9B6426112994A23000EFBF74 /* WeatherCB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherCB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6426142994A23000EFBF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6426162994A23000EFBF74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +59,52 @@
 		9B6426312994A23100EFBF74 /* WeatherCBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherCBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6426352994A23100EFBF74 /* WeatherCBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCBUITests.swift; sourceTree = "<group>"; };
 		9B6426372994A23100EFBF74 /* WeatherCBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B6426452994C34200EFBF74 /* MyNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetWork.swift; sourceTree = "<group>"; };
+		9B64268D2994CDA400EFBF74 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9B64268F2994CDAB00EFBF74 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9B6426912994CDB600EFBF74 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9B6426932994CDBD00EFBF74 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9B6426952994CDCB00EFBF74 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9B6426972994CDD500EFBF74 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		9B6426992994CDE000EFBF74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9B64269C2994CECE00EFBF74 /* KakaoBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KakaoBridgeHeader.h; sourceTree = "<group>"; };
+		9B64269F2994CEDB00EFBF74 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		9B6426A12994CEDB00EFBF74 /* map_present_background_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_background_update.png; sourceTree = "<group>"; };
+		9B6426A22994CEDB00EFBF74 /* detail_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_button.png; sourceTree = "<group>"; };
+		9B6426A32994CEDB00EFBF74 /* shadow_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_balloon.png; sourceTree = "<group>"; };
+		9B6426A42994CEDB00EFBF74 /* map_pinup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup.png; sourceTree = "<group>"; };
+		9B6426A52994CEDB00EFBF74 /* copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copyright.png; sourceTree = "<group>"; };
+		9B6426A62994CEDB00EFBF74 /* th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = th_line.png; sourceTree = "<group>"; };
+		9B6426A72994CEDB00EFBF74 /* point_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point_sprite.png; sourceTree = "<group>"; };
+		9B6426A82994CEDB00EFBF74 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
+		9B6426A92994CEDB00EFBF74 /* noimage256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage256.png; sourceTree = "<group>"; };
+		9B6426AA2994CEDB00EFBF74 /* info_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box.png; sourceTree = "<group>"; };
+		9B6426AB2994CEDB00EFBF74 /* map_pin_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_red@3x.png"; sourceTree = "<group>"; };
+		9B6426AC2994CEDB00EFBF74 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
+		9B6426AD2994CEDB00EFBF74 /* map_present_direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_direction.png; sourceTree = "<group>"; };
+		9B6426AE2994CEDB00EFBF74 /* map_present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present.png; sourceTree = "<group>"; };
+		9B6426AF2994CEDB00EFBF74 /* info_box_tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box_tail.png; sourceTree = "<group>"; };
+		9B6426B02994CEDB00EFBF74 /* map_pinup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup@3x.png"; sourceTree = "<group>"; };
+		9B6426B12994CEDB00EFBF74 /* daum_copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_copyright.png; sourceTree = "<group>"; };
+		9B6426B22994CEDB00EFBF74 /* map_pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin@3x.png"; sourceTree = "<group>"; };
+		9B6426B32994CEDB00EFBF74 /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
+		9B6426B42994CEDB00EFBF74 /* map_pin_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_custom@3x.png"; sourceTree = "<group>"; };
+		9B6426B52994CEDB00EFBF74 /* map_pinup_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup_custom.png; sourceTree = "<group>"; };
+		9B6426B62994CEDB00EFBF74 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
+		9B6426B72994CEDB00EFBF74 /* map_present_tracking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_tracking.png; sourceTree = "<group>"; };
+		9B6426B82994CEDB00EFBF74 /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
+		9B6426B92994CEDC00EFBF74 /* map_pin_shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_shadow@3x.png"; sourceTree = "<group>"; };
+		9B6426BA2994CEDC00EFBF74 /* map_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_red.png; sourceTree = "<group>"; };
+		9B6426BB2994CEDC00EFBF74 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		9B6426BD2994CEDC00EFBF74 /* MTMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapView.h; sourceTree = "<group>"; };
+		9B6426BE2994CEDC00EFBF74 /* MTMapLocationMarkerItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapLocationMarkerItem.h; sourceTree = "<group>"; };
+		9B6426BF2994CEDC00EFBF74 /* MTMapPolyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapPolyline.h; sourceTree = "<group>"; };
+		9B6426C02994CEDC00EFBF74 /* MTMapPOIItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapPOIItem.h; sourceTree = "<group>"; };
+		9B6426C12994CEDC00EFBF74 /* MTMapCameraUpdate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapCameraUpdate.h; sourceTree = "<group>"; };
+		9B6426C22994CEDC00EFBF74 /* MTMapReverseGeoCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapReverseGeoCoder.h; sourceTree = "<group>"; };
+		9B6426C32994CEDC00EFBF74 /* MTMapGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapGeometry.h; sourceTree = "<group>"; };
+		9B6426C42994CEDC00EFBF74 /* MTMapCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapCircle.h; sourceTree = "<group>"; };
+		9B6426CA2994D0E200EFBF74 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6426CC2994D32F00EFBF74 /* DaumMap.framework in Frameworks */,
+				9B64269A2994CDE000EFBF74 /* libsqlite3.tbd in Frameworks */,
+				9B6426982994CDD500EFBF74 /* libxml2.tbd in Frameworks */,
+				9B6426962994CDCB00EFBF74 /* libc++.tbd in Frameworks */,
+				9B6426942994CDBD00EFBF74 /* QuartzCore.framework in Frameworks */,
+				9B6426922994CDB600EFBF74 /* CoreLocation.framework in Frameworks */,
+				9B6426902994CDAB00EFBF74 /* SystemConfiguration.framework in Frameworks */,
+				9B64268E2994CDA400EFBF74 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +147,7 @@
 				9B64262A2994A23100EFBF74 /* WeatherCBTests */,
 				9B6426342994A23100EFBF74 /* WeatherCBUITests */,
 				9B6426122994A23000EFBF74 /* Products */,
+				9B64268C2994CDA300EFBF74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +164,17 @@
 		9B6426132994A23000EFBF74 /* WeatherCB */ = {
 			isa = PBXGroup;
 			children = (
+				9B64269D2994CEDA00EFBF74 /* DaumMap.embeddedframework */,
+				9B6426442994C32700EFBF74 /* Network */,
 				9B6426142994A23000EFBF74 /* AppDelegate.swift */,
 				9B6426162994A23000EFBF74 /* SceneDelegate.swift */,
 				9B6426182994A23000EFBF74 /* MainViewController.swift */,
+				9B6426CA2994D0E200EFBF74 /* MapViewController.swift */,
 				9B64261D2994A23100EFBF74 /* Assets.xcassets */,
 				9B64261F2994A23100EFBF74 /* LaunchScreen.storyboard */,
 				9B6426222994A23100EFBF74 /* Info.plist */,
+				9B64269C2994CECE00EFBF74 /* KakaoBridgeHeader.h */,
+				9B1650A12997468F0096F4F0 /* AddressViewController.swift */,
 			);
 			path = WeatherCB;
 			sourceTree = "<group>";
@@ -122,6 +194,87 @@
 				9B6426372994A23100EFBF74 /* WeatherCBUITestsLaunchTests.swift */,
 			);
 			path = WeatherCBUITests;
+			sourceTree = "<group>";
+		};
+		9B6426442994C32700EFBF74 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B6426452994C34200EFBF74 /* MyNetWork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9B64268C2994CDA300EFBF74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B6426992994CDE000EFBF74 /* libsqlite3.tbd */,
+				9B6426972994CDD500EFBF74 /* libxml2.tbd */,
+				9B6426952994CDCB00EFBF74 /* libc++.tbd */,
+				9B6426932994CDBD00EFBF74 /* QuartzCore.framework */,
+				9B6426912994CDB600EFBF74 /* CoreLocation.framework */,
+				9B64268F2994CDAB00EFBF74 /* SystemConfiguration.framework */,
+				9B64268D2994CDA400EFBF74 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B64269D2994CEDA00EFBF74 /* DaumMap.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				9B6426A02994CEDB00EFBF74 /* Resources */,
+				9B64269F2994CEDB00EFBF74 /* DaumMap.framework */,
+			);
+			path = DaumMap.embeddedframework;
+			sourceTree = "<group>";
+		};
+		9B6426A02994CEDB00EFBF74 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B6426B62994CEDB00EFBF74 /* map_pinup_custom@3x.png */,
+				9B6426B32994CEDB00EFBF74 /* map_pin_custom.png */,
+				9B6426A32994CEDB00EFBF74 /* shadow_balloon.png */,
+				9B6426A42994CEDB00EFBF74 /* map_pinup.png */,
+				9B6426A22994CEDB00EFBF74 /* detail_button.png */,
+				9B6426B42994CEDB00EFBF74 /* map_pin_custom@3x.png */,
+				9B6426B02994CEDB00EFBF74 /* map_pinup@3x.png */,
+				9B6426B92994CEDC00EFBF74 /* map_pin_shadow@3x.png */,
+				9B6426A52994CEDB00EFBF74 /* copyright.png */,
+				9B6426A62994CEDB00EFBF74 /* th_line.png */,
+				9B6426AB2994CEDB00EFBF74 /* map_pin_red@3x.png */,
+				9B6426B12994CEDB00EFBF74 /* daum_copyright.png */,
+				9B6426B22994CEDB00EFBF74 /* map_pin@3x.png */,
+				9B6426B72994CEDB00EFBF74 /* map_present_tracking.png */,
+				9B6426BA2994CEDC00EFBF74 /* map_pin_red.png */,
+				9B6426BC2994CEDC00EFBF74 /* Headers */,
+				9B6426AA2994CEDB00EFBF74 /* info_box.png */,
+				9B6426A72994CEDB00EFBF74 /* point_sprite.png */,
+				9B6426B52994CEDB00EFBF74 /* map_pinup_custom.png */,
+				9B6426AF2994CEDB00EFBF74 /* info_box_tail.png */,
+				9B6426A92994CEDB00EFBF74 /* noimage256.png */,
+				9B6426AD2994CEDB00EFBF74 /* map_present_direction.png */,
+				9B6426B82994CEDB00EFBF74 /* map_pin.png */,
+				9B6426AE2994CEDB00EFBF74 /* map_present.png */,
+				9B6426BB2994CEDC00EFBF74 /* noimage.png */,
+				9B6426A12994CEDB00EFBF74 /* map_present_background_update.png */,
+				9B6426A82994CEDB00EFBF74 /* daum_th_line.png */,
+				9B6426AC2994CEDB00EFBF74 /* map_pin_shadow.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9B6426BC2994CEDC00EFBF74 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				9B6426C02994CEDC00EFBF74 /* MTMapPOIItem.h */,
+				9B6426C12994CEDC00EFBF74 /* MTMapCameraUpdate.h */,
+				9B6426C22994CEDC00EFBF74 /* MTMapReverseGeoCoder.h */,
+				9B6426BF2994CEDC00EFBF74 /* MTMapPolyline.h */,
+				9B6426BE2994CEDC00EFBF74 /* MTMapLocationMarkerItem.h */,
+				9B6426BD2994CEDC00EFBF74 /* MTMapView.h */,
+				9B6426C32994CEDC00EFBF74 /* MTMapGeometry.h */,
+				9B6426C42994CEDC00EFBF74 /* MTMapCircle.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +409,9 @@
 			files = (
 				9B6426192994A23000EFBF74 /* MainViewController.swift in Sources */,
 				9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */,
+				9B6426462994C34200EFBF74 /* MyNetWork.swift in Sources */,
+				9B1650A22997468F0096F4F0 /* AddressViewController.swift in Sources */,
+				9B6426CB2994D0E200EFBF74 /* MapViewController.swift in Sources */,
 				9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,8 +579,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9U7VZ9D2H;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WeatherCB/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherCB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -432,6 +596,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.suyeon.WeatherCB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/suyeonpark/Develop/WeatherCB/WeatherCB/KakaoBridgeHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,8 +616,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9U7VZ9D2H;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WeatherCB/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherCB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -459,6 +633,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +642,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.suyeon.WeatherCB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/suyeonpark/Develop/WeatherCB/WeatherCB/KakaoBridgeHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
