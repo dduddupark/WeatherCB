@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9B1650A22997468F0096F4F0 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A12997468F0096F4F0 /* AddressViewController.swift */; };
+		9B1650A429974FA00096F4F0 /* HttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A329974FA00096F4F0 /* HttpConnection.swift */; };
+		9B1650A6299762D10096F4F0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A5299762D10096F4F0 /* AddressData.swift */; };
 		9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426142994A23000EFBF74 /* AppDelegate.swift */; };
 		9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426162994A23000EFBF74 /* SceneDelegate.swift */; };
 		9B6426192994A23000EFBF74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426182994A23000EFBF74 /* MainViewController.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		9B1650A12997468F0096F4F0 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		9B1650A329974FA00096F4F0 /* HttpConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpConnection.swift; sourceTree = "<group>"; };
+		9B1650A5299762D10096F4F0 /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		9B6426112994A23000EFBF74 /* WeatherCB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherCB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6426142994A23000EFBF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6426162994A23000EFBF74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				9B6426222994A23100EFBF74 /* Info.plist */,
 				9B64269C2994CECE00EFBF74 /* KakaoBridgeHeader.h */,
 				9B1650A12997468F0096F4F0 /* AddressViewController.swift */,
+				9B1650A329974FA00096F4F0 /* HttpConnection.swift */,
+				9B1650A5299762D10096F4F0 /* AddressData.swift */,
 			);
 			path = WeatherCB;
 			sourceTree = "<group>";
@@ -411,8 +417,10 @@
 				9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */,
 				9B6426462994C34200EFBF74 /* MyNetWork.swift in Sources */,
 				9B1650A22997468F0096F4F0 /* AddressViewController.swift in Sources */,
+				9B1650A6299762D10096F4F0 /* AddressData.swift in Sources */,
 				9B6426CB2994D0E200EFBF74 /* MapViewController.swift in Sources */,
 				9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */,
+				9B1650A429974FA00096F4F0 /* HttpConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,7 @@ import UIKit
 
 
 
-class MapViewController: UIViewController, SendData {
-    
-    func sendData(data: Location) {
-        print("맵 : \(data)")
-    }
+class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
