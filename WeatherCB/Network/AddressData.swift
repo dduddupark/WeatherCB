@@ -8,29 +8,24 @@
 import Foundation
 
 struct AddressData: Codable {
-    let response: Response?
- 
+    let response: AddressResponse?
 }
 
-struct Response: Codable {
-    //let header: Header?
-    let body: Body?
-    
+struct AddressResponse: Codable {
+    let header: Header?
+    let body: AddressBody?
 }
 
 struct Header: Codable {
     let resultCode: String?
     let resultMsg: String?
-    
 }
 
-struct Body: Codable {
+struct AddressBody: Codable {
     let totalCount: Int?
     let items: [Address]?
-
 }
 
 struct Address: Codable {
     let stationName: String?
-    
 }

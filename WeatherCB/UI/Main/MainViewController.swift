@@ -8,7 +8,6 @@
 import UIKit
 import CoreLocation
 
-
 class MainViewController: UIViewController {
 
     var address = ""
@@ -55,27 +54,30 @@ class MainViewController: UIViewController {
         
         let addressList = address.components(separatedBy: " ")
         
-        
-        
         if(addressList.count > 2) {
-            
-//            fetchServer(type: .ArpltnInfo,
-//                       query: ["addr": addressList[0] + " " + addressList[1]]) {
-//                (result: Result<AddressData, APIError>) in
-//                switch result {
-//                case .success(let model):
-//                    print("success \(model)")
-//                case .failure(let error):
-//                    print("error \(error)")
-//                }
-//            }
-            
-            fetchModel(type: .ArpltnInfo,
-                       address: addressList[0] + " " + addressList[1]) {
+            //측정소명 가져오기
+            fetchServer(type: .ArpltnInfo,
+                        query: ["addr" : addressList[0] + " " + addressList[1]]) {
                 (result: Result<AddressData, APIError>) in
                 switch result {
                 case .success(let model):
                     print("success \(model)")
+
+                    let address = model.response?.body?.items?.first?.stationName
+                    if let address {
+                        //미세먼지 데이터 가져오기
+                        fetchServer(type: .DustInfo,
+                                    query: ["stationName" : address, "dataTerm" : "DAILY", "ver" : "1.0"]) {
+                            (result: Result<DustData, APIError>) in
+                            switch result {
+                            case .success(let model):
+                                print("success \(model)")
+
+                            case .failure(let error):
+                                print("error \(error)")
+                            }
+                        }
+                    }
                 case .failure(let error):
                     print("error \(error)")
                 }

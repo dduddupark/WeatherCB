@@ -40,11 +40,13 @@ func fetchServer<T: Codable>(type: UrlType, query: Dictionary<String, String>, c
     
     var urlComponents: URLComponents?
     
+    print("type = \(type)")
+    
     switch(type) {
     case .ArpltnInfo:
         urlComponents = URLComponents(string: "http://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getMsrstnList?")
     case .DustInfo:
-       urlComponents = URLComponents(string: "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc?")
+       urlComponents = URLComponents(string: "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?")
     }
     
     for item in defaultQuery() {
@@ -57,19 +59,12 @@ func fetchServer<T: Codable>(type: UrlType, query: Dictionary<String, String>, c
         urlComponents?.queryItems?.append(URLQueryItem(name: item.key, value: item.value)) // 파라미터
     }
     
-    let str: String? = urlComponents?.string
-    
-    print("str = \(str)")
-    
-    guard let endodeStr = str?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
-    let encodedSpacingStr = endodeStr.replacingOccurrences(of: "%25", with: "%")
-    
-    print("encodedSpacingStr = \(encodedSpacingStr)")
-    
+    let url: String? = urlComponents?.string
+    let encodedSpacingStr = url?.replacingOccurrences(of: "%25", with: "%") ?? ""
     guard let myUrl = URL(string: encodedSpacingStr) else {return}
     
     print("myUrl = \(myUrl)")
-    
+
     // [http 통신 타입 및 헤더 지정 실시]
     var requestURL = URLRequest(url: myUrl)
     requestURL.httpMethod = "GET" // GET
