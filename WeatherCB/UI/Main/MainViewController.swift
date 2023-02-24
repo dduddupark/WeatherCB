@@ -9,8 +9,8 @@ import UIKit
 import CoreLocation
 
 class MainViewController: UIViewController {
-
-    var address = ""
+    
+    var delegate: DisDelegate?
     
     private let mapButton: UIButton = {
        let btn = UIButton()
@@ -19,10 +19,44 @@ class MainViewController: UIViewController {
         return btn
     }()
     
+    private let emptyLabel: UILabel = {
+        let label = UILabel()
+        label.sizeToFit()
+        label.text = "우측 상단에서 우리집 주소를 검색해보세요!"
+        label.font = .boldSystemFont(ofSize: 15)
+        label.textColor = UIColor(named: "Color000000")
+        return label
+        }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        checkData()
+        showDefaultView()
+    }
+    
+    private func checkData() {
+       let pointStateName = UserDefaults.standard.value(forKey: key_address) as? MyAddress
+        
+        if pointStateName == nil {
+            showEmptyView()
+        } else {
+            //getWeatherData(pointAddress: pointStateName)
+        }
+    }
+    
+    private func showEmptyView() {
+        view.addSubview(emptyLabel)
+     
+        emptyLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        emptyLabel.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        emptyLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        emptyLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+    }
+    
+    private func showDefaultView() {
         view.addSubview(mapButton)
         
         mapButton.translatesAutoresizingMaskIntoConstraints = false
@@ -33,11 +67,11 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(address)
-        if address != "" {
-            print("getWeatherData")
-            getWeatherData()
-        }
+//        print(address)
+//        if address != "" {
+//            print("getWeatherData")
+//            getWeatherData()
+//        }
     }
     
     @objc func moveMain(_ sender: Any) {
@@ -50,41 +84,41 @@ class MainViewController: UIViewController {
         self.present(pushVC, animated: true)
     }
     
-    private func getWeatherData() {
+    private func getWeatherData(pointAddress: MyAddress) {
         
-        let addressList = address.components(separatedBy: " ")
-        
-        if(addressList.count > 2) {
-            //측정소명 가져오기
-            fetchServer(type: .ArpltnInfo,
-                        query: ["addr" : addressList[0] + " " + addressList[1]]) {
-                (result: Result<AddressData, APIError>) in
-                switch result {
-                case .success(let model):
-                    print("success \(model)")
-
-                    let address = model.response?.body?.items?.first?.stationName
-                    if let address {
-                        //미세먼지 데이터 가져오기
-                        fetchServer(type: .DustInfo,
-                                    query: ["stationName" : address, "dataTerm" : "DAILY", "ver" : "1.0"]) {
-                            (result: Result<DustData, APIError>) in
-                            switch result {
-                            case .success(let model):
-                                print("success \(model)")
-
-                            case .failure(let error):
-                                print("error \(error)")
-                            }
-                        }
-                    }
-                case .failure(let error):
-                    print("error \(error)")
-                }
-            }
-           
-        } else {
-            print("없는 주소 입니다.")
-        }
+//        let addressList = pointAddress?.address?.components(separatedBy: " ")
+//
+//        if(addressList.count > 2) {
+//            //측정소명 가져오기
+//            fetchServer(type: .ArpltnInfo,
+//                        query: ["addr" : addressList[0] + " " + addressList[1]]) {
+//                (result: Result<AddressData, APIError>) in
+//                switch result {
+//                case .success(let model):
+//                    print("success \(model)")
+//
+//                    let address = model.response?.body?.items?.first?.stationName
+//                    if let address {
+//                        //미세먼지 데이터 가져오기
+//                        fetchServer(type: .DustInfo,
+//                                    query: ["stationName" : address, "dataTerm" : "DAILY", "ver" : "1.0"]) {
+//                            (result: Result<DustData, APIError>) in
+//                            switch result {
+//                            case .success(let model):
+//                                print("success \(model)")
+//
+//                            case .failure(let error):
+//                                print("error \(error)")
+//                            }
+//                        }
+//                    }
+//                case .failure(let error):
+//                    print("error \(error)")
+//                }
+//            }
+//
+//        } else {
+//            print("없는 주소 입니다.")
+//        }
     }
 }

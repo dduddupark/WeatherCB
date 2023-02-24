@@ -28,6 +28,8 @@
 		9B64269A2994CDE000EFBF74 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6426992994CDE000EFBF74 /* libsqlite3.tbd */; };
 		9B6426CB2994D0E200EFBF74 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426CA2994D0E200EFBF74 /* MapViewController.swift */; };
 		9B6426CC2994D32F00EFBF74 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B64269F2994CEDB00EFBF74 /* DaumMap.framework */; };
+		9B727498299B5E8600B8AED9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B727497299B5E8600B8AED9 /* UserDefaults.swift */; };
+		9B72749B299B6D2E00B8AED9 /* AddressAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B72749A299B6D2E00B8AED9 /* AddressAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		9B6426C32994CEDC00EFBF74 /* MTMapGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapGeometry.h; sourceTree = "<group>"; };
 		9B6426C42994CEDC00EFBF74 /* MTMapCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMapCircle.h; sourceTree = "<group>"; };
 		9B6426CA2994D0E200EFBF74 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9B727497299B5E8600B8AED9 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		9B72749A299B6D2E00B8AED9 /* AddressAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 				9B64261F2994A23100EFBF74 /* LaunchScreen.storyboard */,
 				9B6426222994A23100EFBF74 /* Info.plist */,
 				9B64269C2994CECE00EFBF74 /* KakaoBridgeHeader.h */,
+				9B727497299B5E8600B8AED9 /* UserDefaults.swift */,
 			);
 			path = WeatherCB;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 		9B727494299B2FFD00B8AED9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9B727499299B6D2300B8AED9 /* Util */,
 				9B727496299B301600B8AED9 /* Main */,
 				9B727495299B300400B8AED9 /* Adress */,
 			);
@@ -294,6 +300,7 @@
 		9B727495299B300400B8AED9 /* Adress */ = {
 			isa = PBXGroup;
 			children = (
+				9B72749A299B6D2E00B8AED9 /* AddressAlertView.swift */,
 				9B1650A12997468F0096F4F0 /* AddressViewController.swift */,
 			);
 			path = Adress;
@@ -305,6 +312,13 @@
 				9B6426182994A23000EFBF74 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9B727499299B6D2300B8AED9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,11 +451,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B72749B299B6D2E00B8AED9 /* AddressAlertView.swift in Sources */,
 				9B6426192994A23000EFBF74 /* MainViewController.swift in Sources */,
 				9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */,
 				9B1650A22997468F0096F4F0 /* AddressViewController.swift in Sources */,
 				9B1650A6299762D10096F4F0 /* AddressData.swift in Sources */,
 				9B1650A8299A5FDB0096F4F0 /* DustData.swift in Sources */,
+				9B727498299B5E8600B8AED9 /* UserDefaults.swift in Sources */,
 				9B6426CB2994D0E200EFBF74 /* MapViewController.swift in Sources */,
 				9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */,
 				9B1650A429974FA00096F4F0 /* HttpConnection.swift in Sources */,
