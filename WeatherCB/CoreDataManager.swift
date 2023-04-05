@@ -38,17 +38,17 @@ class CoreDataManager {
         return model
     }
     
-    func saveCoreAddress(myAddress: MyAddress, onSuccess: @escaping ((Bool) -> Void)) {
+    func saveCoreAddress(stateName: String, roadAddress: String, isSelected: Bool = false, onSuccess: @escaping ((Bool) -> Void)) {
         if let context = context,
            let entity: NSEntityDescription = NSEntityDescription.entity(forEntityName: modelName, in: context) {
             if let address: CoreAddress = NSManagedObject(entity: entity, insertInto: context) as? CoreAddress {
-                address.stateName = myAddress.stateName
-                address.address = myAddress.address
-                address.isSelected = myAddress.isSelected
+                address.stateName = stateName
+                address.address = roadAddress
+                address.isSelected = isSelected
                 
                 contextSave { success in
                            onSuccess(success)
-                       }
+                }
             }
         }
     }

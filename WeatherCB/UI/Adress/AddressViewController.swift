@@ -11,7 +11,7 @@ import WebKit
 
 // delegate protocol
 protocol DisDelegate{
-    func delegateAddress(myAddress: MyAddress)
+    func delegateAddress(address: CoreAddress)
 }
 
 class AddressViewController: UIViewController, AddressItemProtocol {
@@ -162,6 +162,8 @@ class AddressViewController: UIViewController, AddressItemProtocol {
                 print("onSuccess = \(onSuccess)")
             }
             
+            UserDefaults.standard.set(address.stateName, forKey: key_stateName)
+            
             alert.dismiss(animated: false)
             self.reloadTableView()
         }
@@ -236,19 +238,18 @@ extension AddressViewController: WKScriptMessageHandler {
                         if let stationName {
                             
                             DispatchQueue.main.async {
-                                
                                 self.webView?.isHidden = true
-                                self.showPopUp(myAddress: MyAddress(stateName: roadAddress, address: stationName, isSelected: true))
+                                self.showPopUp(stateName: stationName, address: roadAddress)
                             }
                             
                         }
                     case .failure(let error):
-                        self.errorPopUp()
+                       print("failure = \(error)")
                     }
                 }
                 
             } else {
-                self.errorPopUp()
+                print("failure addressList = \(addressList)")
             }
         } else {
             
@@ -258,15 +259,15 @@ extension AddressViewController: WKScriptMessageHandler {
         //        self.dismiss(animated: true, completion: nil)
     }
     
-    private func showPopUp(myAddress: MyAddress) {
+    private func showPopUp(stateName: String, address: String) {
         // 메시지창 컨트롤러 인스턴스 생성
-        let alert = UIAlertController(title: "위치 저장", message: "\(String(describing: myAddress.address))를 저장하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "위치 저장", message: "\(address)를 저장하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         
         // 메시지 창 컨트롤러에 들어갈 버튼 액션 객체 생성
         let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default){ (action) in
             // 버튼 클릭시 실행되는 코드
             
-            CoreDataManager.shared.saveCoreAddress(myAddress: myAddress) { onSuccess in
+            CoreDataManager.shared.saveCoreAddress(stateName: stateName, roadAddress: address, isSelected: true) { onSuccess in
                 print("onSuccess = \(onSuccess)")
             }
             

@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 
+
 class MainViewController: UIViewController {
     
     var delegate: DisDelegate?
@@ -21,28 +22,47 @@ class MainViewController: UIViewController {
     
     private let emptyLabel: UILabel = {
         let label = UILabel()
-        label.sizeToFit()
-        label.text = "우측 상단에서 우리집 주소를 검색해보세요!"
+        label.text = "선택한 위치가 없어요.\n우측 상단에서 우리집 주소를 검색해보세요!"
         label.font = .boldSystemFont(ofSize: 15)
+        label.numberOfLines = 0
         label.textColor = UIColor(named: "Color000000")
+        label.textAlignment = .center
         return label
-        }()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
         
         checkData()
         showDefaultView()
     }
     
     private func checkData() {
-       let pointStateName = UserDefaults.standard.value(forKey: key_address) as? MyAddress
+        let pointStateName = UserDefaults.standard.string(forKey: key_stateName)
+        
+        print("pointStateName = \(pointStateName)")
         
         if pointStateName == nil {
             showEmptyView()
         } else {
-            //getWeatherData(pointAddress: pointStateName)
+            if let stateName = pointStateName {
+                fetchServer(type: .DustInfo,
+                            query: ["stationName" : stateName,
+                                    "dataTerm" : "DAILY",
+                                    "ver" : "1.0"]) {
+                    (result: Result<DustData, APIError>) in
+                    switch result {
+                    case .success(let model):
+                       if let data = model.response?.body?.items?[0] {
+                           print("success \(data)")
+                           self.showDustView(dustData: data)
+                        }
+                    case .failure(let error):
+                        print("failure \(error)")
+                    }
+                }
+            }
         }
     }
     
@@ -66,12 +86,14 @@ class MainViewController: UIViewController {
         mapButton.addTarget(self, action: #selector(moveMain), for: .touchUpInside)
     }
     
+    private func showDustView(dustData: Dust) {
+        view.addSubview(mapButton)
+        
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-//        print(address)
-//        if address != "" {
-//            print("getWeatherData")
-//            getWeatherData()
-//        }
+        checkData()
     }
     
     @objc func moveMain(_ sender: Any) {
@@ -82,43 +104,5 @@ class MainViewController: UIViewController {
         let pushVC = AddressViewController()
         pushVC.modalPresentationStyle = .fullScreen
         self.present(pushVC, animated: true)
-    }
-    
-    private func getWeatherData(pointAddress: MyAddress) {
-        
-//        let addressList = pointAddress?.address?.components(separatedBy: " ")
-//
-//        if(addressList.count > 2) {
-//            //측정소명 가져오기
-//            fetchServer(type: .ArpltnInfo,
-//                        query: ["addr" : addressList[0] + " " + addressList[1]]) {
-//                (result: Result<AddressData, APIError>) in
-//                switch result {
-//                case .success(let model):
-//                    print("success \(model)")
-//
-//                    let address = model.response?.body?.items?.first?.stationName
-//                    if let address {
-//                        //미세먼지 데이터 가져오기
-//                        fetchServer(type: .DustInfo,
-//                                    query: ["stationName" : address, "dataTerm" : "DAILY", "ver" : "1.0"]) {
-//                            (result: Result<DustData, APIError>) in
-//                            switch result {
-//                            case .success(let model):
-//                                print("success \(model)")
-//
-//                            case .failure(let error):
-//                                print("error \(error)")
-//                            }
-//                        }
-//                    }
-//                case .failure(let error):
-//                    print("error \(error)")
-//                }
-//            }
-//
-//        } else {
-//            print("없는 주소 입니다.")
-//        }
     }
 }

@@ -10,17 +10,16 @@ import UIKit
 class AddressAlertView: UIViewController, DisDelegate {
 
     //main에서 받을 MyAddress 형 옵셔널 변수
-    var receiveAddress: MyAddress?
+    var receiveAddress: CoreAddress?
     
     //delegate required
-    func delegateAddress(myAddress: MyAddress) {
+    func delegateAddress(address: CoreAddress) {
             //팝업에서 delegate한 값 textLabel에 뿌려주기
-            print(myAddress)
+            print(address)
         //main에서 받아온 text Label에 표시
-        stateNameLabel.text = myAddress.stateName
-        addressLabel.text = myAddress.address
+        stateNameLabel.text = address.stateName
+        addressLabel.text = address.address
     }
-    
     
     private lazy var uiView: UIView = {
         let view = UIView()
