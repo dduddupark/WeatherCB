@@ -11,6 +11,7 @@
 		9B1650A429974FA00096F4F0 /* HttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A329974FA00096F4F0 /* HttpConnection.swift */; };
 		9B1650A6299762D10096F4F0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A5299762D10096F4F0 /* AddressData.swift */; };
 		9B1650A8299A5FDB0096F4F0 /* DustData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1650A7299A5FDB0096F4F0 /* DustData.swift */; };
+		9B46C44F29DC48FC00B1D85C /* WeatherCBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B46C44D29DC48FC00B1D85C /* WeatherCBModel.xcdatamodeld */; };
 		9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426142994A23000EFBF74 /* AppDelegate.swift */; };
 		9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426162994A23000EFBF74 /* SceneDelegate.swift */; };
 		9B6426192994A23000EFBF74 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6426182994A23000EFBF74 /* MainViewController.swift */; };
@@ -30,6 +31,10 @@
 		9B6426CC2994D32F00EFBF74 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B64269F2994CEDB00EFBF74 /* DaumMap.framework */; };
 		9B727498299B5E8600B8AED9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B727497299B5E8600B8AED9 /* UserDefaults.swift */; };
 		9B72749B299B6D2E00B8AED9 /* AddressAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B72749A299B6D2E00B8AED9 /* AddressAlertView.swift */; };
+		9B7E6B8429DC54DA007F04A0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E6B8329DC54DA007F04A0 /* CoreDataManager.swift */; };
+		9B7E6B8B29DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E6B8929DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift */; };
+		9B7E6B8C29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E6B8A29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift */; };
+		9B9A218E29B066E50094FAF6 /* AddressItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A218D29B066E50094FAF6 /* AddressItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,7 @@
 		9B1650A329974FA00096F4F0 /* HttpConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpConnection.swift; sourceTree = "<group>"; };
 		9B1650A5299762D10096F4F0 /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		9B1650A7299A5FDB0096F4F0 /* DustData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustData.swift; sourceTree = "<group>"; };
+		9B46C44E29DC48FC00B1D85C /* WeatherCBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherCBModel.xcdatamodel; sourceTree = "<group>"; };
 		9B6426112994A23000EFBF74 /* WeatherCB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherCB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6426142994A23000EFBF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6426162994A23000EFBF74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +119,10 @@
 		9B6426CA2994D0E200EFBF74 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9B727497299B5E8600B8AED9 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9B72749A299B6D2E00B8AED9 /* AddressAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAlertView.swift; sourceTree = "<group>"; };
+		9B7E6B8329DC54DA007F04A0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		9B7E6B8929DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreAddress+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9B7E6B8A29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreAddress+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9B9A218D29B066E50094FAF6 /* AddressItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +182,9 @@
 		9B6426132994A23000EFBF74 /* WeatherCB */ = {
 			isa = PBXGroup;
 			children = (
+				9B7E6B8929DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift */,
+				9B7E6B8A29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift */,
+				9B7E6B8329DC54DA007F04A0 /* CoreDataManager.swift */,
 				9B727494299B2FFD00B8AED9 /* UI */,
 				9B64269D2994CEDA00EFBF74 /* DaumMap.embeddedframework */,
 				9B6426442994C32700EFBF74 /* Network */,
@@ -290,6 +303,7 @@
 		9B727494299B2FFD00B8AED9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9B46C44D29DC48FC00B1D85C /* WeatherCBModel.xcdatamodeld */,
 				9B727499299B6D2300B8AED9 /* Util */,
 				9B727496299B301600B8AED9 /* Main */,
 				9B727495299B300400B8AED9 /* Adress */,
@@ -302,6 +316,7 @@
 			children = (
 				9B72749A299B6D2E00B8AED9 /* AddressAlertView.swift */,
 				9B1650A12997468F0096F4F0 /* AddressViewController.swift */,
+				9B9A218D29B066E50094FAF6 /* AddressItemView.swift */,
 			);
 			path = Adress;
 			sourceTree = "<group>";
@@ -454,12 +469,17 @@
 				9B72749B299B6D2E00B8AED9 /* AddressAlertView.swift in Sources */,
 				9B6426192994A23000EFBF74 /* MainViewController.swift in Sources */,
 				9B6426152994A23000EFBF74 /* AppDelegate.swift in Sources */,
+				9B7E6B8429DC54DA007F04A0 /* CoreDataManager.swift in Sources */,
 				9B1650A22997468F0096F4F0 /* AddressViewController.swift in Sources */,
 				9B1650A6299762D10096F4F0 /* AddressData.swift in Sources */,
 				9B1650A8299A5FDB0096F4F0 /* DustData.swift in Sources */,
 				9B727498299B5E8600B8AED9 /* UserDefaults.swift in Sources */,
+				9B9A218E29B066E50094FAF6 /* AddressItemView.swift in Sources */,
+				9B7E6B8B29DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift in Sources */,
 				9B6426CB2994D0E200EFBF74 /* MapViewController.swift in Sources */,
+				9B46C44F29DC48FC00B1D85C /* WeatherCBModel.xcdatamodeld in Sources */,
 				9B6426172994A23000EFBF74 /* SceneDelegate.swift in Sources */,
+				9B7E6B8C29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift in Sources */,
 				9B1650A429974FA00096F4F0 /* HttpConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,6 +828,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B46C44D29DC48FC00B1D85C /* WeatherCBModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B46C44E29DC48FC00B1D85C /* WeatherCBModel.xcdatamodel */,
+			);
+			currentVersion = 9B46C44E29DC48FC00B1D85C /* WeatherCBModel.xcdatamodel */;
+			path = WeatherCBModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9B6426092994A23000EFBF74 /* Project object */;
 }
