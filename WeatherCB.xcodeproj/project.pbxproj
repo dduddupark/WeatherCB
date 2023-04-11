@@ -36,8 +36,8 @@
 		9B7E6B8B29DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E6B8929DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift */; };
 		9B7E6B8C29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E6B8A29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift */; };
 		9B7E6B8F29DDC84B007F04A0 /* emoji_happy.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E6B8E29DDC84B007F04A0 /* emoji_happy.json */; };
-		9B7E6B9229DDC8F1007F04A0 /* emoji_soso.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E6B9029DDC8F1007F04A0 /* emoji_soso.json */; };
-		9B7E6B9329DDC8F1007F04A0 /* emoji_sad.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E6B9129DDC8F1007F04A0 /* emoji_sad.json */; };
+		9B7E6B9229DDC8F1007F04A0 /* emoji_sad.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E6B9029DDC8F1007F04A0 /* emoji_sad.json */; };
+		9B7E6B9329DDC8F1007F04A0 /* emoji_soso.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E6B9129DDC8F1007F04A0 /* emoji_soso.json */; };
 		9B7E6B9529DDC9B2007F04A0 /* DustLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E6B9429DDC9B2007F04A0 /* DustLevel.swift */; };
 		9B9A218E29B066E50094FAF6 /* AddressItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A218D29B066E50094FAF6 /* AddressItemView.swift */; };
 		B72DC632D86C90D41895C02E /* Pods_WeatherCBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36232CC6AD05F5F773A2444 /* Pods_WeatherCBTests.framework */; };
@@ -136,8 +136,8 @@
 		9B7E6B8929DD5B28007F04A0 /* CoreAddress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreAddress+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9B7E6B8A29DD5B28007F04A0 /* CoreAddress+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreAddress+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9B7E6B8E29DDC84B007F04A0 /* emoji_happy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji_happy.json; path = ../../../../Downloads/emoji_happy.json; sourceTree = "<group>"; };
-		9B7E6B9029DDC8F1007F04A0 /* emoji_soso.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji_soso.json; path = ../../../../Downloads/emoji_soso.json; sourceTree = "<group>"; };
-		9B7E6B9129DDC8F1007F04A0 /* emoji_sad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji_sad.json; path = ../../../../Downloads/emoji_sad.json; sourceTree = "<group>"; };
+		9B7E6B9029DDC8F1007F04A0 /* emoji_sad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji_sad.json; path = ../../../../Downloads/emoji_sad.json; sourceTree = "<group>"; };
+		9B7E6B9129DDC8F1007F04A0 /* emoji_soso.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = emoji_soso.json; path = ../../../../Downloads/emoji_soso.json; sourceTree = "<group>"; };
 		9B7E6B9429DDC9B2007F04A0 /* DustLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustLevel.swift; sourceTree = "<group>"; };
 		9B9A218D29B066E50094FAF6 /* AddressItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItemView.swift; sourceTree = "<group>"; };
 		9FDE20D1C6C26B46BF3B01A1 /* Pods-WeatherCBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCBTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherCBTests/Pods-WeatherCBTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -381,8 +381,8 @@
 		9B7E6B8D29DDC824007F04A0 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				9B7E6B9129DDC8F1007F04A0 /* emoji_sad.json */,
-				9B7E6B9029DDC8F1007F04A0 /* emoji_soso.json */,
+				9B7E6B9129DDC8F1007F04A0 /* emoji_soso.json */,
+				9B7E6B9029DDC8F1007F04A0 /* emoji_sad.json */,
 				9B7E6B8E29DDC84B007F04A0 /* emoji_happy.json */,
 			);
 			path = Lottie;
@@ -499,9 +499,9 @@
 			files = (
 				9B7E6B8F29DDC84B007F04A0 /* emoji_happy.json in Resources */,
 				9B6426212994A23100EFBF74 /* LaunchScreen.storyboard in Resources */,
-				9B7E6B9229DDC8F1007F04A0 /* emoji_soso.json in Resources */,
+				9B7E6B9229DDC8F1007F04A0 /* emoji_sad.json in Resources */,
 				9B64261E2994A23100EFBF74 /* Assets.xcassets in Resources */,
-				9B7E6B9329DDC8F1007F04A0 /* emoji_sad.json in Resources */,
+				9B7E6B9329DDC8F1007F04A0 /* emoji_soso.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

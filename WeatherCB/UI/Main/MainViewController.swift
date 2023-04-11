@@ -14,8 +14,9 @@ class MainViewController: UIViewController {
     private let dustStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
-        view.distribution = .fillEqually
-        view.spacing = 0
+        view.alignment = .center
+        view.distribution = .equalSpacing
+        view.spacing = 10
         return view
     }()
     
@@ -148,32 +149,33 @@ class MainViewController: UIViewController {
         let centerXdustInfoViewMain = dustInfoViewMain.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         centerXdustInfoViewMain.isActive = true
         
-        dustInfoViewMain.loadView(grade: dustData.pm10Grade ?? "", text: getDustText(value: dustData.pm10Grade).rawValue)
-    
-//        view.addSubview(dustStackView)
-//
-//        dustStackView.translatesAutoresizingMaskIntoConstraints = false
-//        dustStackView.topAnchor.constraint(equalTo: tvAddress.bottomAnchor, constant: 20).isActive = true
-//        dustStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-//        dustStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-//
-//        let dustInfoView10 = DustInfoView()
-//        dustStackView.addArrangedSubview(dustInfoView10)
-//        dustInfoView10.backgroundColor = .gray
-//
-//        dustInfoView10.topAnchor.constraint(equalTo: dustStackView.topAnchor).isActive = true
-//        dustInfoView10.bottomAnchor.constraint(equalTo: dustStackView.bottomAnchor).isActive = true
-//        dustInfoView10.loadView(grade: dustData.pm10Grade ?? "", text: "미세먼지 농도\n\(String(describing: dustData.pm10Value ?? ""))")
-//
-//        let dustInfoView20 = DustInfoView()
-//        dustStackView.addArrangedSubview(dustInfoView20)
-//        dustInfoView20.backgroundColor = .red
-//
-//        dustInfoView20.topAnchor.constraint(equalTo: dustStackView.topAnchor).isActive = true
-//        dustInfoView20.bottomAnchor.constraint(equalTo: dustStackView.bottomAnchor).isActive = true
-//        dustInfoView20.loadView(grade: dustData.pm25Grade ?? "", text: "초미세먼지 농도\n\(String(describing: dustData.pm25Value ?? ""))")
-//
-//        print("size = \(dustStackView.intrinsicContentSize)")
+        dustInfoViewMain.loadView(grade: dustData.pm10Grade ?? "", text: getDustText(value: dustData.pm10Grade).rawValue, emojiSize: 200, fontSize: 30)
+        
+        //먼지 정보 리스트
+        view.addSubview(dustStackView)
+
+        dustStackView.translatesAutoresizingMaskIntoConstraints = false
+        dustStackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -200).isActive = true
+        dustStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 50).isActive = true
+        dustStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -50).isActive = true
+        
+        let dustInfoView10 = DustInfoView()
+        dustStackView.addArrangedSubview(dustInfoView10)
+        dustInfoView10.topAnchor.constraint(equalTo: dustStackView.topAnchor).isActive = true
+        dustInfoView10.bottomAnchor.constraint(equalTo: dustStackView.bottomAnchor).isActive = true
+        dustInfoView10.loadView(grade: dustData.pm10Grade ?? "", text: "미세먼지 농도\n\(String(describing: dustData.pm10Value ?? ""))", emojiSize: 70, fontSize: 12)
+
+        let dustInfoView25 = DustInfoView()
+        dustStackView.addArrangedSubview(dustInfoView25)
+        dustInfoView25.topAnchor.constraint(equalTo: dustStackView.topAnchor).isActive = true
+        dustInfoView25.bottomAnchor.constraint(equalTo: dustStackView.bottomAnchor).isActive = true
+        dustInfoView25.loadView(grade: dustData.pm25Grade ?? "", text: "초미세먼지 농도\n\(String(describing: dustData.pm25Value ?? ""))", emojiSize: 70, fontSize: 12)
+        
+        let dustInfoViewNo2 = DustInfoView()
+        dustStackView.addArrangedSubview(dustInfoViewNo2)
+        dustInfoViewNo2.topAnchor.constraint(equalTo: dustStackView.topAnchor).isActive = true
+        dustInfoViewNo2.bottomAnchor.constraint(equalTo: dustStackView.bottomAnchor).isActive = true
+        dustInfoViewNo2.loadView(grade: dustData.no2Grade ?? "", text: "이산화질소\n\(String(describing: dustData.no2Value ?? ""))", emojiSize: 70, fontSize: 12)
     }
     
     @objc func moveMain(_ sender: Any) {
@@ -194,7 +196,6 @@ class DustInfoView: UIView {
     
    private let label : UILabel = {
         let label = UILabel()
-       label.font = .boldSystemFont(ofSize: 30)
        label.textColor = UIColor(named: "Color000000")
        label.textAlignment = .center
        label.numberOfLines = 0
@@ -209,9 +210,10 @@ class DustInfoView: UIView {
         super.init(coder: coder)
     }
     
-    func loadView(grade: String, text: String) {
+    func loadView(grade: String, text: String, emojiSize: Int, fontSize: Int) {
         
         label.text = text
+        label.font = .boldSystemFont(ofSize: CGFloat(fontSize))
     
         var animation: LottieAnimation? = nil
         
@@ -238,10 +240,8 @@ class DustInfoView: UIView {
         
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        //animationView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 30).isActive = true
-        //animationView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 30).isActive = true
-        animationView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        animationView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        animationView.widthAnchor.constraint(equalToConstant: CGFloat(emojiSize)).isActive = true
+        animationView.heightAnchor.constraint(equalToConstant: CGFloat(emojiSize)).isActive = true
         let centerXanimationView = animationView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         centerXanimationView.isActive = true
         
