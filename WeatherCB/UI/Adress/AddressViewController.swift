@@ -60,7 +60,6 @@ class AddressViewController: UIViewController, AddressItemProtocol {
         backButton.heightAnchor.constraint(equalToConstant: 48).isActive = true
         backButton.addTarget(self, action: #selector(popActivity), for: .touchUpInside)
         
-        
         searchAddressButton.translatesAutoresizingMaskIntoConstraints = false
         searchAddressButton.topAnchor.constraint(equalTo: self.backButton.bottomAnchor).isActive = true
         searchAddressButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
@@ -162,7 +161,7 @@ class AddressViewController: UIViewController, AddressItemProtocol {
                 print("onSuccess = \(onSuccess)")
             }
             
-            UserDefaults.standard.set(address.stateName, forKey: key_stateName)
+            UserDefaults.standard.set(address.address, forKey: key_address)
             
             alert.dismiss(animated: false)
             self.reloadTableView()

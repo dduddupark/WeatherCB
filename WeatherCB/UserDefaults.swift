@@ -7,7 +7,7 @@
 
 import Foundation
 
-let key_stateName = "key_stateName"
+let key_address = "key_stateName"
 
 
 

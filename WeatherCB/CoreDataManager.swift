@@ -16,6 +16,21 @@ class CoreDataManager {
     
     let modelName = "CoreAddress"
     
+    func findCoreAddress(address: String, data: @escaping ((CoreAddress?) -> Void)) {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = filteredRequest(address: address)
+        
+        do {
+            if let results: [CoreAddress] = try context?.fetch(fetchRequest) as? [CoreAddress] {
+                if results.count != 0 {
+                    data(results[0])
+                }
+            }
+        } catch let error as NSError {
+            print("Could not fatch🥺: \(error), \(error.userInfo)")
+            data(nil)
+        }
+    }
+    
     func getCoreAddress(ascending: Bool = false) -> [CoreAddress] {
         var model: [CoreAddress] = [CoreAddress]()
         
